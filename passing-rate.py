@@ -1,8 +1,11 @@
-grades = ["A", "B", "B+", "C", "D-", "F", "C-", "F"]
-index = 0
+import pandas as pd
 
-for grade in grades:
-    if grade == "F":
-        print(grade)
-        index += 1
-        
+df1 = pd.read_csv("Spanish.csv")
+sp_students = df1.to_dict(orient='records')
+
+df2 = pd.read_csv("ELD.csv")
+eld_students = df2.to_dict(orient='records')
+
+
+for student in eld_students:
+    print(student)
